@@ -80,12 +80,11 @@ class HomePage extends StatelessWidget {
                     itemCount: 5,
                     itemBuilder: (_, index) {
                       return _verticalButton(
-                        title: "ind vs Aus",
-                        icon: Icons.sports_cricket,
+                          title: "ind vs Aus",
+                          icon: Icons.sports_cricket,
                           onTap: () {
-                          Get.to(DetailedCoverageScreen());
-                        }
-                      );
+                            Get.to(DetailedCoverageScreen());
+                          });
                     },
                   ),
                 ),
@@ -178,13 +177,19 @@ class HomePage extends StatelessWidget {
                         isFirst: index == 0 ? true : false,
                         isLast: index == 4 ? true : false,
                         indicatorStyle: const IndicatorStyle(
-                          width: 15,
-                          color: Color(0xffB58459),
-                        ),
-
+                            // width: 25,
+                            color: Color(0xffB58459),
+                            indicator: CircleAvatar(
+                              backgroundColor: Color(0xffBDBDBD),
+                                child: Icon(
+                              Icons.announcement_outlined,
+                              size: 12,
+                              color: Colors.black,
+                            ))),
                         beforeLineStyle: const LineStyle(
                           color: Color(0xffB58459),
                           thickness: 1,
+
                         ),
                         endChild: ListTile(
                           title: Text("Strac off to a superb start"),
@@ -246,8 +251,7 @@ class HomePage extends StatelessWidget {
                             Get.to(NewsDetailsScreen());
                           },
                         );
-                      }
-                      ),
+                      }),
                 ),
                 //Football News-------------------------------------------------
                 CustomCategoryTile(
@@ -258,19 +262,18 @@ class HomePage extends StatelessWidget {
                 Container(
                   // padding: EdgeInsets.only(left: 8),
                   child: ListView.builder(
-                    shrinkWrap: true,
-                    physics: BouncingScrollPhysics(),
-                    itemCount: 5,
-                    itemBuilder: (_, index) {
-                      return CustomNewsTile(
-                        style: index == 0 ? 1 : 3,
-                        isVideo: index == 0 ? true : false,
-                        onPress: () {
-                          Get.to(NewsDetailsScreen());
-                        },
-                      );
-                    }
-                  ),
+                      shrinkWrap: true,
+                      physics: BouncingScrollPhysics(),
+                      itemCount: 5,
+                      itemBuilder: (_, index) {
+                        return CustomNewsTile(
+                          style: index == 0 ? 1 : 3,
+                          isVideo: index == 0 ? true : false,
+                          onPress: () {
+                            Get.to(NewsDetailsScreen());
+                          },
+                        );
+                      }),
                 ),
                 //Cricket videos------------------------------------------------------
                 CustomCategoryTile(
@@ -282,21 +285,20 @@ class HomePage extends StatelessWidget {
                   // padding: EdgeInsets.only(left: 8),
                   height: Get.size.height * 0.28,
                   child: ListView.builder(
-                    shrinkWrap: true,
-                    scrollDirection: Axis.horizontal,
-                    physics: PageScrollPhysics(),
-                    padding: EdgeInsets.all(0),
-                    itemCount: 5,
-                    itemBuilder: (_, index) {
-                      return CustomNewsTile(
-                        style: 2,
-                        isVideo: index == 0 ? true : false,
-                        onPress: () {
-                          Get.to(NewsDetailsScreen());
-                        },
-                      );
-                    }
-                  ),
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      physics: PageScrollPhysics(),
+                      padding: EdgeInsets.all(0),
+                      itemCount: 5,
+                      itemBuilder: (_, index) {
+                        return CustomNewsTile(
+                          style: 2,
+                          isVideo: index == 0 ? true : false,
+                          onPress: () {
+                            Get.to(NewsDetailsScreen());
+                          },
+                        );
+                      }),
                 ),
               ],
             ),
@@ -339,3 +341,4 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+

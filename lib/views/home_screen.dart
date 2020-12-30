@@ -27,7 +27,24 @@ class HomeScreen extends StatelessWidget {
     return Obx(() => Scaffold(
           key: drawerKey,
           appBar: AppBar(
-            leading: Container(
+            leading: Padding(
+              padding: const EdgeInsets.only(top: 16.0,bottom: 16.0, left: 4),
+              child: InkWell(
+                borderRadius: BorderRadius.circular(10),
+                child: Container(
+                  alignment: Alignment.center,
+                  padding: EdgeInsets.all(0),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: Colors.white)
+                  ),
+                  child: Text("Sports",style: TextStyle(fontSize: 12),),
+                ),
+                onTap: (){
+                  drawerKey.currentState.openDrawer();
+                },
+              ),
+            ),/*Container(
               child: IconButton(
                 icon: Icon(Icons.sports_cricket),
                 color: Colors.white,
@@ -35,7 +52,7 @@ class HomeScreen extends StatelessWidget {
                   drawerKey.currentState.openDrawer();
                 },
               ),
-            ),
+            ),*/
             title: Text('title'.tr),
             centerTitle: true,
             elevation: 0,
