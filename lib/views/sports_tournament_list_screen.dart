@@ -17,6 +17,7 @@ class SportsTournamentListScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Matches"),
+        elevation: 0,
       ),
       body: Column(
         children: [
@@ -34,7 +35,7 @@ class SportsTournamentListScreen extends StatelessWidget {
               isScrollable: true,
               indicator: BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(20)),
-                  color: Colors.deepOrange[300]),
+                  color: Get.theme.accentColor.withOpacity(0.4)),
               tabs: LanguageService().locale.languageCode == 'bn'
                   ? tabControllers.tabListTournamentbn.map((item) {
                 return Tab(

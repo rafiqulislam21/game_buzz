@@ -203,11 +203,11 @@ class HomeScreen extends StatelessWidget {
               },
               items: [
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.home_outlined), label: 'Home'),
+                    icon: Icon(Icons.home_rounded), label: 'Home'),
                 BottomNavigationBarItem(
                     icon: Icon(Icons.date_range), label: 'Schedule'),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.view_list_outlined), label: 'News'),
+                    icon: Icon(Icons.list_alt_rounded), label: 'News'),
                 BottomNavigationBarItem(
                     icon: Icon(Icons.ondemand_video), label: 'Videos'),
                 BottomNavigationBarItem(

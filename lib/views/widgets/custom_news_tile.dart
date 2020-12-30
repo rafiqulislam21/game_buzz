@@ -44,7 +44,7 @@ class CustomNewsTile extends StatelessWidget {
                       isVideo == true ? Align(
                         alignment: Alignment.center,
                         child: Icon(Icons.play_circle_fill, size: 40,
-                          color: Colors.red.withOpacity(0.9),),
+                          color: Colors.red.withOpacity(0.8),),
                       )
                           : SizedBox(),
                     ],
@@ -93,7 +93,7 @@ class CustomNewsTile extends StatelessWidget {
                       isVideo == true ? Align(
                         alignment: Alignment.center,
                         child: Icon(Icons.play_circle_fill, size: 40,
-                          color: Colors.red.withOpacity(0.9),),
+                          color: Colors.red.withOpacity(0.8),),
                         )
                           : SizedBox(),
                     ],
@@ -143,7 +143,7 @@ class CustomNewsTile extends StatelessWidget {
                       isVideo == true ? Align(
                         alignment: Alignment.center,
                         child: Icon(Icons.play_circle_fill, size: 40,
-                          color: Colors.red.withOpacity(0.9),),
+                          color: Colors.red.withOpacity(0.8),),
                       )
                           : SizedBox(),
                     ],

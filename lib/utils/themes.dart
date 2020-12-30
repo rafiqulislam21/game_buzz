@@ -14,7 +14,7 @@ class Themes {
   static Color lightBG2 = Colors.grey[300];
   static Color lightBG3 = Color(0xfffcfcff);
 
-  static Color darkBG2 = Color(0xff3C3B40);
+  static Color darkBG2 = Color(0xff272629);
   // static Color darkBG2 = Color(0xff1E1E1E);
   static Color darkBG3 = Color(0xff333333);
 
@@ -22,7 +22,7 @@ class Themes {
   static Color buttonDark = Color(0xff7972B5);
 
   static Color appbarLight = Color(0xffB58459);
-  static Color appbarDark = Color(0xff1a2126);
+  static Color appbarDark = Color(0xff3C3A3F);
 
   static var darkShadow = const <BoxShadow>[
     BoxShadow(

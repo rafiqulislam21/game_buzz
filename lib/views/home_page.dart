@@ -166,7 +166,7 @@ class HomePage extends StatelessWidget {
                   onTap: () {},
                 ),
                 Container(
-                  // padding: EdgeInsets.only(left: 8),
+                  padding: EdgeInsets.only(left: 8),
                   child: ListView.builder(
                     padding: EdgeInsets.all(0),
                     shrinkWrap: true,
@@ -179,10 +179,11 @@ class HomePage extends StatelessWidget {
                         isLast: index == 4 ? true : false,
                         indicatorStyle: const IndicatorStyle(
                           width: 15,
-                          color: Colors.deepOrange,
+                          color: Color(0xffB58459),
                         ),
+
                         beforeLineStyle: const LineStyle(
-                          color: Colors.deepOrange,
+                          color: Color(0xffB58459),
                           thickness: 1,
                         ),
                         endChild: ListTile(

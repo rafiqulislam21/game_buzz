@@ -31,7 +31,7 @@ class SchedulePage extends StatelessWidget {
             isScrollable: true,
             indicator: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(20)),
-                color: Colors.deepOrange[300]),
+                color: Get.theme.accentColor.withOpacity(0.4)),
             tabs: LanguageService().locale.languageCode == 'bn'
                 ? tabControllers.tabListVideobn.map((item) {
                       return Tab(

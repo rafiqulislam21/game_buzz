@@ -93,7 +93,7 @@ class DetailedCoverageScreen extends StatelessWidget {
                     labelColor: Get.theme.primaryColor,
                     unselectedLabelColor: Colors.grey[600],
                     indicatorSize: TabBarIndicatorSize.tab,
-                    indicatorColor: Colors.red,
+                    indicatorColor: Get.theme.primaryColor,
                     physics: BouncingScrollPhysics(),
                     // isScrollable: true,
                     tabs: LanguageService().locale.languageCode == 'bn'
