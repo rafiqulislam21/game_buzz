@@ -3,7 +3,9 @@ import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:game_buzz/views/see_full_blog_screen.dart';
 import 'package:get/get.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 
@@ -146,15 +148,34 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 //Live updated timeline-----------------------------------------
+
                 ListTile(
-                  leading: Text(
-                    "Live Updates",
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                  title: Row(
+                    children: [
+                      SpinKitRipple(
+                        color: Get.theme.primaryColor,
+                        size: 32,
+                        /*
+                      itemBuilder: (BuildContext context, int index) {
+                        return DecoratedBox(
+                          decoration: BoxDecoration(
+                            color: index.isEven ? Colors.blue : Colors.red,
+                          ),
+                        );
+                      },*/
+                      ),
+                      Text(
+                        "Live Updates",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(width: 10,),
+                      Text(
+                        "10 min ago",
+                        style: TextStyle(fontWeight: FontWeight.w200, fontSize: 10),
+                      ),
+                    ],
                   ),
-                  title: Text(
-                    "10 min ago",
-                    style: TextStyle(fontWeight: FontWeight.w200, fontSize: 10),
-                  ),
+                  // title:
                   trailing: Text(
                     "SEE FULL BLOG",
                     style: TextStyle(
@@ -162,7 +183,11 @@ class HomePage extends StatelessWidget {
                         color: Get.theme.primaryColor),
                   ),
                   dense: true,
-                  onTap: () {},
+                  onTap: () {
+                    Get.to(SeeFullBlogScreen(
+                      title: "SEE FULL BLOG",
+                    ));
+                  },
                 ),
                 Container(
                   padding: EdgeInsets.only(left: 8),
@@ -178,7 +203,7 @@ class HomePage extends StatelessWidget {
                         isLast: index == 4 ? true : false,
                         indicatorStyle: const IndicatorStyle(
                             // width: 25,
-                            color: Color(0xffB58459),
+                            color: Color(0xffD3D3D3),
                             indicator: CircleAvatar(
                               backgroundColor: Color(0xffBDBDBD),
                                 child: Icon(
@@ -187,9 +212,8 @@ class HomePage extends StatelessWidget {
                               color: Colors.black,
                             ))),
                         beforeLineStyle: const LineStyle(
-                          color: Color(0xffB58459),
+                          color: Color(0xffD3D3D3),
                           thickness: 1,
-
                         ),
                         endChild: ListTile(
                           title: Text("Strac off to a superb start"),

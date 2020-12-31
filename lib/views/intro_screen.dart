@@ -6,7 +6,6 @@ import 'package:get/get.dart';
 
 import 'widgets/widgets.dart';
 
-
 class IntroScreen extends StatefulWidget {
   @override
   _IntroScreenState createState() => _IntroScreenState();
@@ -21,9 +20,13 @@ class _IntroScreenState extends State<IntroScreen> {
     return Scaffold(
       appBar: PreferredSize(
           preferredSize: Size.fromHeight(Get.size.height * 0.25),
-          // here the desired height
           child: AppBar(
               elevation: 0,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.vertical(
+                  bottom: Radius.elliptical(100,10),
+                ),
+              ),
               backgroundColor: Get.theme.primaryColor,
               flexibleSpace: Column(
                 children: [
@@ -59,7 +62,6 @@ class _IntroScreenState extends State<IntroScreen> {
               SizedBox(
                 height: 20,
               ),
-
               Wrap(
                 children: sportList.map((item) {
                   return CustomFilterChip(
