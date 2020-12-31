@@ -152,21 +152,21 @@ class HomePage extends StatelessWidget {
                 ListTile(
                   title: Row(
                     children: [
-                      SpinKitRipple(
-                        color: Get.theme.primaryColor,
-                        size: 32,
-                        /*
-                      itemBuilder: (BuildContext context, int index) {
-                        return DecoratedBox(
-                          decoration: BoxDecoration(
-                            color: index.isEven ? Colors.blue : Colors.red,
-                          ),
-                        );
-                      },*/
-                      ),
                       Text(
                         "Live Updates",
                         style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      SpinKitRipple(
+                        // color: Colors.red,
+                        size: 32,
+                      itemBuilder: (BuildContext context, int index) {
+                        return DecoratedBox(
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.red,
+                          ),
+                        );
+                      },
                       ),
                       SizedBox(width: 10,),
                       Text(
