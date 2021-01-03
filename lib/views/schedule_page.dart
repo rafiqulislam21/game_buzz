@@ -1,6 +1,3 @@
-import 'dart:async';
-import 'dart:convert';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:game_buzz/controllers/custom_tab_controller.dart';
@@ -93,23 +90,23 @@ class SchedulePage extends StatelessWidget {
                 color: Colors.deepOrange[300]),*/
             tabs: LanguageService().locale.languageCode == 'bn'
                 ? tabControllers.tabListResultsbn.map((item) {
-              return Tab(
-                child: Align(
-                  alignment: Alignment.center,
-                  child: Text(item),
-                ),
-              );
-            })?.toList() ??
-                []
+                      return Tab(
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: Text(item),
+                        ),
+                      );
+                    })?.toList() ??
+                    []
                 : tabControllers.tabListResults.map((item) {
-              return Tab(
-                child: Align(
-                  alignment: Alignment.center,
-                  child: Text(item),
-                ),
-              );
-            })?.toList() ??
-                [],
+                      return Tab(
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: Text(item),
+                        ),
+                      );
+                    })?.toList() ??
+                    [],
           ),
         ),
         Expanded(
@@ -128,7 +125,6 @@ class SchedulePage extends StatelessWidget {
     );
   }
 
-
   Widget _matches() {
     return Scrollbar(
       thickness: 4,
@@ -144,7 +140,9 @@ class SchedulePage extends StatelessWidget {
                   title: "Pakistan in New Zealand, 2020-21",
                   trailingIcon: Icons.arrow_right_alt,
                   onTap: () {
-                    Get.to(SportsTournamentListScreen());
+                    Get.to(SportsTournamentListScreen(),
+                        transition: Transition.rightToLeftWithFade,
+                        duration: Duration(milliseconds: 400));
                   },
                 ),
                 CustomScoreTile2(
@@ -156,7 +154,9 @@ class SchedulePage extends StatelessWidget {
                   title: "Odisha Cricket Leauge, 2020-21",
                   trailingIcon: Icons.arrow_right_alt,
                   onTap: () {
-                    Get.to(SportsTournamentListScreen());
+                    Get.to(SportsTournamentListScreen(),
+                        transition: Transition.rightToLeftWithFade,
+                        duration: Duration(milliseconds: 400));
                   },
                 ),
                 ListView.builder(

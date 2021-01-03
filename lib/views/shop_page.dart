@@ -1,10 +1,7 @@
-import 'dart:async';
-import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:game_buzz/views/widgets/custom_widget.dart';
-import 'package:get/get.dart';
 
 
 class ShopPage extends StatelessWidget {

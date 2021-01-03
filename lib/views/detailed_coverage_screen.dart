@@ -8,8 +8,9 @@ import 'widgets/widgets.dart';
 
 class DetailedCoverageScreen extends StatelessWidget {
   final String title;
+  final int id;
 
-  DetailedCoverageScreen({Key key, this.title}) : super(key: key);
+  DetailedCoverageScreen({Key key, this.title, @required this.id}) : super(key: key);
   final CustomTabControllers tabControllers = Get.put(CustomTabControllers());
   final ScrollController _scrollViewController = ScrollController();
 
@@ -26,39 +27,42 @@ class DetailedCoverageScreen extends StatelessWidget {
                   ? SizedBox()
                   : Center(
                       child: ListTile(
-                      leading: Icon(
+                    leading: Hero(
+                      tag: id,
+                      child: Icon(
                         Icons.sports_baseball,
                         size: 60,
                       ),
-                      title: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Card(
-                            color: Get.theme.accentColor,
-                            child: Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 4.0),
-                              child: Text(
-                                'Test',
-                                style: TextStyle(color: Colors.white),
-                              ),
+                    ),
+                    title: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Card(
+                          color: Get.theme.accentColor,
+                          child: Padding(
+                            padding:
+                                const EdgeInsets.symmetric(horizontal: 4.0),
+                            child: Text(
+                              'Test',
+                              style: TextStyle(color: Colors.white),
                             ),
                           ),
-                          Text(
-                            'India in Australia 2020-21',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ],
-                      ),
-                      subtitle: Text(
-                        '20 November-14January 2021 . 12 Matches',
-                        style: TextStyle(color: Get.theme.accentColor),
-                      ),
-                    )),
+                        ),
+                        Text(
+                          'India in Australia 2020-21',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                    subtitle: Text(
+                      '20 November-14January 2021 . 12 Matches',
+                      style: TextStyle(color: Get.theme.accentColor),
+                    ),
+                  )),
               title:
                   !boxIsScrolled ? SizedBox() : Text('Ind vs Aus match live'),
               actions: [
@@ -241,14 +245,14 @@ class DetailedCoverageScreen extends StatelessWidget {
                     isSelected[index] = !isSelected[index];
                   });*/
                 },
-                isSelected: [false, true, false]/*isSelected*/,
+                isSelected: [false, true, false] /*isSelected*/,
               ),
             ),
             Scrollbar(
                 thickness: 4,
                 radius: Radius.circular(4),
                 child: ListView.builder(
-                  padding: EdgeInsets.all(0),
+                    padding: EdgeInsets.all(0),
                     shrinkWrap: true,
                     physics: ClampingScrollPhysics(),
                     itemCount: 10,

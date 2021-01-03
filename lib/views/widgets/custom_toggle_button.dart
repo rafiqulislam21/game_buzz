@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class CustomToggleButton extends StatefulWidget {
   final List<String> values;
   final ValueChanged onToggleCallback;

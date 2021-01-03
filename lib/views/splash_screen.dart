@@ -50,7 +50,7 @@ class SplashScreen extends StatelessWidget {
     Get.off(
       // HomeScreen(),
         IntroScreen(),
-      duration: Duration(seconds: 1),
+      // duration: Duration(seconds: 1),
       curve: Curves.easeInOutBack,
       // transition: Transition.rightToLeftWithFade,
     );

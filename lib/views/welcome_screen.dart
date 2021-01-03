@@ -3,8 +3,6 @@ import 'package:game_buzz/views/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'news_page.dart';
-import 'view_all_widgets.dart';
 
 class WelcomeScreen extends StatelessWidget {
   @override

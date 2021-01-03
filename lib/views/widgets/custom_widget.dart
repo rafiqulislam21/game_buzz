@@ -20,7 +20,7 @@ class CustomWidget extends StatelessWidget {
               child: Icon(
                 icon??Icons.error_outline,
                 color: Get.theme.splashColor,
-                size: iconSize??80,
+                size: iconSize?.toDouble()??80,
               ),
             ),
           )

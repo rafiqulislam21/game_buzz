@@ -40,6 +40,7 @@ class CustomScoreTile extends StatelessWidget {
                         child: CustomCachedNetworkImage(
                           url: "http://via.placeholder.com/288x188",
                           height: Get.size.height * 0.20,
+                          fit: BoxFit.cover,
                           // width: Get.size.width,
                         ),
                       ),
@@ -132,6 +133,7 @@ class CustomScoreTile extends StatelessWidget {
                                 fontWeight: FontWeight.w500, fontSize: 16),
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
+                            textAlign: TextAlign.end,
                           ),
                           subtitle: Text(
                             "20 overs",
@@ -139,6 +141,7 @@ class CustomScoreTile extends StatelessWidget {
                                 fontWeight: FontWeight.w400, fontSize: 14),
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
+                            textAlign: TextAlign.end,
                           ),
                         ),
                       ),

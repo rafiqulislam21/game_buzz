@@ -31,6 +31,8 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeService().theme,
       enableLog: false,
       debugShowCheckedModeBanner: false,
+      defaultTransition: Transition.fade,
+      transitionDuration: Duration(milliseconds: 600),
       home: SplashScreen()/*HomeScreen()*/,
     );
   }

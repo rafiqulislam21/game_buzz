@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 
-import 'news_details_screen.dart';
 import 'widgets/widgets.dart';
 
 class SeeFullBlogScreen extends StatelessWidget {
