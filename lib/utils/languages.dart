@@ -10,7 +10,7 @@ class Languages extends Translations {
       'dark': "Dark",
       'change_language': "Change Language",
       'english': "English",
-      'bengali': "Bengali",
+      'version': "Version",
     },
     'bn_BD': {
       'title': 'গেইম বাজ',
@@ -20,6 +20,7 @@ class Languages extends Translations {
       'change_language': "ভাষা পরিবর্তন করুন",
       'english': "ইংরেজী",
       'bengali': "বাংলা",
+      'version': "ভার্সন",
     }
   };
 }

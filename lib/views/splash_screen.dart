@@ -26,10 +26,9 @@ class SplashScreen extends StatelessWidget {
                     // Text("Logo",style: TextStyle(fontSize: 45),),
                     Icon(Icons.sports_cricket_outlined,size: 100, color: Get.theme.primaryColor,),
                     SizedBox(height: 10,),
-                    SpinKitFadingCircle(
+                    SpinKitCircle(
                       color: Get.theme.primaryColor,
-                      /*
-                      itemBuilder: (BuildContext context, int index) {
+                      /*itemBuilder: (BuildContext context, int index) {
                         return DecoratedBox(
                           decoration: BoxDecoration(
                             color: index.isEven ? Colors.blue : Colors.red,

@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
       enableLog: false,
       debugShowCheckedModeBanner: false,
       defaultTransition: Transition.fade,
-      transitionDuration: Duration(milliseconds: 600),
+      // transitionDuration: Duration(milliseconds: 600),
       home: SplashScreen()/*HomeScreen()*/,
     );
   }

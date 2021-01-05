@@ -57,6 +57,7 @@ class _IntroScreenState extends State<IntroScreen> {
           padding: const EdgeInsets.symmetric(horizontal: 10.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(
                 height: 20,

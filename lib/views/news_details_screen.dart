@@ -8,7 +8,7 @@ class NewsDetailsScreen extends StatelessWidget {
   final String title;
   final int id;
   final ScrollController scrollController = ScrollController();
-  final CustomInfoControllers infoController = Get.put(CustomInfoControllers());
+  final CustomInfoController infoController = Get.put(CustomInfoController());
 
   NewsDetailsScreen({Key key, this.title, @required this.id}) : super(key: key);
 
