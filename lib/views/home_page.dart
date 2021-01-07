@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:game_buzz/views/see_full_blog_screen.dart';
+import 'package:game_buzz/views/sports_tournament_list_screen.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/src/routes/transitions_type.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 
 import 'detailed_coverage_screen.dart';
+import 'individual_sports_screen.dart';
 import 'news_details_screen.dart';
 import 'see_more_screen.dart';
 import 'widgets/widgets.dart';
@@ -61,7 +63,14 @@ class HomePage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.to(SportsTournamentListScreen(
+                      title: "Cricket",
+                    ),
+                        transition: Transition.rightToLeftWithFade,
+                        duration: Duration(milliseconds: 400)
+                    );
+                  },
                 )
               ],
             ),
@@ -83,13 +92,14 @@ class HomePage extends StatelessWidget {
                       itemCount: 5,
                       itemBuilder: (_, index) {
                         return Hero(
-                          tag: index+1000,
+                          tag: "DetailedCoverage$index",
                           child: _verticalButton(
                               title: "ind vs Aus",
                               icon: Icons.sports_cricket,
                               onPressed: () {
                                 Get.to(DetailedCoverageScreen(
-                                  id: index+1000
+                                  id: index,
+                                  tag: "DetailedCoverage$index",
                                 ));
                               }),
                         );
@@ -119,12 +129,13 @@ class HomePage extends StatelessWidget {
                       itemCount: 10,
                       itemBuilder: (_, index) {
                         return Hero(
-                          tag: index,
+                          tag: "FeaturedVideos$index",
                           child: CustomNewsTile(
                             style: 2,
                             onPress: () {
                               Get.to(NewsDetailsScreen(
                                 id: index,
+                                tag: "FeaturedVideos$index",
                               ));
                             },
                             isVideo: true,
@@ -155,13 +166,14 @@ class HomePage extends StatelessWidget {
                       itemCount: 5,
                       itemBuilder: (_, index) {
                         return Hero(
-                          tag: index+100,
+                          tag: "h2h$index",
                           child: CustomNewsTile(
                             style: index == 0 ? 1 : 3,
                             isVideo: true,
                             onPress: () {
                               Get.to(NewsDetailsScreen(
-                                id: index+100
+                                id: index,
+                                tag: "h2h$index",
                               ));
                             },
                           ),
@@ -275,13 +287,14 @@ class HomePage extends StatelessWidget {
                       itemCount: 4,
                       itemBuilder: (_, index) {
                         return Hero(
-                          tag: index+200,
+                          tag: "Trending$index",
                           child: CustomNewsTile(
                             style: 2,
                             isVideo: true,
                             onPress: () {
                               Get.to(NewsDetailsScreen(
-                                id: index+200
+                                id: index,
+                                tag: "Trending$index",
                               ));
                             },
                           ),
@@ -304,13 +317,14 @@ class HomePage extends StatelessWidget {
                         itemCount: 5,
                         itemBuilder: (_, index) {
                           return Hero(
-                            tag: index+300,
+                            tag: "CricketNews$index",
                             child: CustomNewsTile(
                               style: index == 0 ? 1 : 3,
                               isVideo: index == 0 ? true : false,
                               onPress: () {
                                 Get.to(NewsDetailsScreen(
-                                  id: index+200
+                                  id: index,
+                                  tag: "CricketNews$index",
                                 ));
                               },
                             ),
@@ -331,13 +345,14 @@ class HomePage extends StatelessWidget {
                         itemCount: 5,
                         itemBuilder: (_, index) {
                           return Hero(
-                            tag: index+400,
+                            tag: "FootballNews$index",
                             child: CustomNewsTile(
                               style: index == 0 ? 1 : 3,
                               isVideo: index == 0 ? true : false,
                               onPress: () {
                                 Get.to(NewsDetailsScreen(
-                                  id: index+400
+                                  id: index,
+                                  tag: "FootballNews$index",
                                 ));
                               },
                             ),
@@ -361,13 +376,14 @@ class HomePage extends StatelessWidget {
                         itemCount: 5,
                         itemBuilder: (_, index) {
                           return Hero(
-                            tag: index+500,
+                            tag: "CricketVideos$index",
                             child: CustomNewsTile(
                               style: 2,
                               isVideo: index == 0 ? true : false,
                               onPress: () {
                                 Get.to(NewsDetailsScreen(
-                                  id: index+500,
+                                  id: index,
+                                  tag: "CricketVideos$index",
                                 ));
                               },
                             ),

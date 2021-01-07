@@ -86,7 +86,7 @@ class SchedulePage extends StatelessWidget {
                 Get.bottomSheet(
                   Container(
                       // color: Get.theme.cardColor,
-                      // height: Get.size.height * 0.90,
+                      height: Get.size.height * 0.85,
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                     children: [
@@ -177,7 +177,7 @@ class SchedulePage extends StatelessWidget {
                                 color: Get.theme.primaryColor,
                                 textColor: Colors.white,
                                 onPressed: (){
-
+                                  Get.back();
                                 }
                             ),
                           )
@@ -185,13 +185,14 @@ class SchedulePage extends StatelessWidget {
                       )
                     ],
                   )),
-                  // isScrollControlled: true,
+                  isScrollControlled: true,
                   enableDrag: true,
                   backgroundColor: Get.theme.backgroundColor,
                   shape: RoundedRectangleBorder(
                     borderRadius:
                         BorderRadius.vertical(top: Radius.circular(10.0)),
                   ),
+                  clipBehavior: Clip.antiAlias,
                 );
               },
             ),

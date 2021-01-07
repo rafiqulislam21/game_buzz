@@ -63,7 +63,7 @@ class _CustomFilterChipState extends State<CustomFilterChip> {
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Expanded(child: Image.asset("assets/img/bd-logo.png",height: 50,width: 50,)),
+                          Expanded(child: Image.asset("assets/img/bd-logo.png",height: Get.height*0.1??50,width: Get.height*0.1??50,)),
                           Text(
                             widget.chipName??"",
                             style: TextStyle(

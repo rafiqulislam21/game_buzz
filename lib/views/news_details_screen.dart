@@ -7,10 +7,11 @@ import 'package:get/get.dart';
 class NewsDetailsScreen extends StatelessWidget {
   final String title;
   final int id;
+  final String tag;
   final ScrollController scrollController = ScrollController();
   final CustomInfoController infoController = Get.put(CustomInfoController());
 
-  NewsDetailsScreen({Key key, this.title, @required this.id}) : super(key: key);
+  NewsDetailsScreen({Key key, this.title, @required this.id, @required this.tag}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +59,7 @@ class NewsDetailsScreen extends StatelessWidget {
                           fontSize: 16.0,
                         )),*/
                     background: Hero(
-                      tag: id,
+                      tag: tag,
                       child: Image.network(
                   "https://images.pexels.com/photos/396547/pexels-photo-396547.jpeg?auto=compress&cs=tinysrgb&h=350",
                   fit: BoxFit.cover,

@@ -15,6 +15,7 @@ import 'package:game_buzz/views/widgets/custom_button.dart';
 import 'package:game_buzz/views/widgets/widgets.dart';
 import 'package:get/get.dart';
 
+import 'individual_sports_screen.dart';
 import 'news_page.dart';
 import 'search_screen.dart';
 import 'view_all_widgets.dart';
@@ -187,161 +188,217 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   Expanded(
                       child: ListView(
-                        padding: EdgeInsets.zero,
-                        physics: BouncingScrollPhysics(),
-                        children: <Widget>[
-                          ListTile(
-                            title: Text(
-                              'All Sports',
-                              style: TextStyle(fontSize: 25),
-                            ),
+                    padding: EdgeInsets.zero,
+                    physics: BouncingScrollPhysics(),
+                    children: <Widget>[
+                      ListTile(
+                        title: Text(
+                          'All Sports',
+                          style: TextStyle(fontSize: 25),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      ListTile(
+                        dense: true,
+                        leading: Icon(
+                          Icons.sports_cricket,
+                          color: Get.theme.primaryColor,
+                        ),
+                        title: Text(
+                          'Cricket',
+                        ),
+                        onTap: () {
+                          Get.back();
+                          Get.to(IndividualSportsScreen(
+                            title: "Cricket",
                           ),
-                          SizedBox(
-                            height: 20,
+                              transition: Transition.rightToLeftWithFade,
+                              duration: Duration(milliseconds: 400)
+                          );
+                        },
+                      ),
+                      ListTile(
+                        dense: true,
+                        leading: Icon(
+                          Icons.sports_volleyball,
+                          color: Get.theme.primaryColor,
+                        ),
+                        title: Text(
+                          'Football',
+                        ),
+                        onTap: () {
+                          Get.back();
+                          Get.to(IndividualSportsScreen(
+                            title: "Football",
                           ),
-                          ListTile(
-                            dense: true,
-                            leading: Icon(
-                              Icons.sports_cricket,
-                              color: Get.theme.primaryColor,
-                            ),
-                            title: Text(
-                              'All Sports',
-                            ),
-                            onTap: () {},
+                              transition: Transition.rightToLeftWithFade,
+                              duration: Duration(milliseconds: 400)
+                          );
+                        },
+                      ),
+                      ListTile(
+                        dense: true,
+                        leading: Icon(
+                          Icons.sports_basketball,
+                          color: Get.theme.primaryColor,
+                        ),
+                        title: Text(
+                          'Basketball',
+                        ),
+                        onTap: () {
+                          Get.back();
+                          Get.to(IndividualSportsScreen(
+                            title: "Basketball",
                           ),
-                          ListTile(
-                            dense: true,
-                            leading: Icon(
-                              Icons.sports_volleyball,
-                              color: Get.theme.primaryColor,
-                            ),
-                            title: Text(
-                              'Football',
-                            ),
-                            onTap: () {},
+                              transition: Transition.rightToLeftWithFade,
+                              duration: Duration(milliseconds: 400)
+                          );
+                        },
+                      ),
+                      ListTile(
+                        dense: true,
+                        leading: Icon(
+                          Icons.sports_hockey,
+                          color: Get.theme.primaryColor,
+                        ),
+                        title: Text(
+                          'Hockey',
+                        ),
+                        onTap: () {
+                          Get.back();
+                          Get.to(IndividualSportsScreen(
+                            title: "Hockey",
                           ),
-                          ListTile(
-                            dense: true,
-                            leading: Icon(
-                              Icons.sports_basketball,
-                              color: Get.theme.primaryColor,
-                            ),
-                            title: Text(
-                              'Basketball',
-                            ),
-                            onTap: () {},
+                              transition: Transition.rightToLeftWithFade,
+                              duration: Duration(milliseconds: 400)
+                          );
+                        },
+                      ),
+                      ListTile(
+                        dense: true,
+                        leading: Icon(
+                          Icons.sports_football,
+                          color: Get.theme.primaryColor,
+                        ),
+                        title: Text(
+                          'NFL',
+                        ),
+                        onTap: () {
+                          Get.back();
+                          Get.to(IndividualSportsScreen(
+                            title: "NFL",
                           ),
-                          ListTile(
-                            dense: true,
-                            leading: Icon(
-                              Icons.sports_hockey,
-                              color: Get.theme.primaryColor,
-                            ),
-                            title: Text(
-                              'Hockey',
-                            ),
-                            onTap: () {},
+                              transition: Transition.rightToLeftWithFade,
+                              duration: Duration(milliseconds: 400)
+                          );
+                        },
+                      ),
+                      ListTile(
+                        dense: true,
+                        leading: Icon(
+                          Icons.sports_baseball,
+                          color: Get.theme.primaryColor,
+                        ),
+                        title: Text(
+                          'Baseball',
+                        ),
+                        onTap: () {
+                          Get.back();
+                          Get.to(IndividualSportsScreen(
+                            title: "Baseball",
                           ),
-                          ListTile(
-                            dense: true,
-                            leading: Icon(
-                              Icons.sports_football,
-                              color: Get.theme.primaryColor,
-                            ),
-                            title: Text(
-                              'NFL',
-                            ),
-                            onTap: () {},
+                              transition: Transition.rightToLeftWithFade,
+                              duration: Duration(milliseconds: 400)
+                          );
+                        },
+                      ),
+                      ListTile(
+                        dense: true,
+                        leading: Icon(
+                          Icons.sports_handball,
+                          color: Get.theme.primaryColor,
+                        ),
+                        title: Text(
+                          'Handball',
+                        ),
+                        onTap: () {
+                          Get.back();
+                          Get.to(IndividualSportsScreen(
+                            title: "Handball",
                           ),
-                          ListTile(
-                            dense: true,
-                            leading: Icon(
-                              Icons.sports_baseball,
-                              color: Get.theme.primaryColor,
-                            ),
-                            title: Text(
-                              'Baseball',
-                            ),
-                            onTap: () {},
-                          ),
-                          ListTile(
-                            dense: true,
-                            leading: Icon(
-                              Icons.sports_handball,
-                              color: Get.theme.primaryColor,
-                            ),
-                            title: Text(
-                              'Handball',
-                            ),
-                            onTap: () {},
-                          ),
-                          Divider(),
-                          ListTile(
-                              leading: Icon(ThemeService().loadThemeFromBox()
-                                  ? Icons.wb_twighlight
-                                  : Icons.wb_sunny_sharp),
-                              title: Text('change_theme'.tr),
-                              subtitle: Text(ThemeService().loadThemeFromBox()
-                                  ? 'dark'.tr
-                                  : 'light'.tr),
-                              trailing: Switch(
-                                value: ThemeService().loadThemeFromBox(),
-                                onChanged: (val) {
-                                  ThemeService().switchTheme();
-                                },
-                                activeColor: Theme.of(context).accentColor,
-                              )),
-                          ListTile(
-                              leading: Icon(Icons.translate),
-                              title: Text('change_language'.tr),
-                              subtitle: Text(
-                                  LanguageService().locale.languageCode == 'bn'
-                                      ? 'bengali'.tr
-                                      : 'english'.tr),
-                              trailing: Switch(
-                                value: LanguageService().locale.languageCode == 'bn'
-                                    ? true
-                                    : false,
-                                onChanged: (val) {
-                                  if (val) {
-                                    LanguageService().switchLanguage(
-                                        changeLocale: Locale('bn', 'BD'));
-                                  } else {
-                                    LanguageService().switchLanguage(
-                                        changeLocale: Locale('en', 'US'));
-                                  }
-                                },
-                                activeColor: Theme.of(context).accentColor,
-                              )),
-                          ListTile(
-                            leading: Icon(Icons.widgets),
-                            title: Text('Essential widgets'),
-                            subtitle: Text('Custom widgets for use'),
-                            trailing: Icon(Icons.keyboard_arrow_right),
-                            onTap: () {
-                              Get.to(
-                                ViewAllWidgets(),
-                                duration: Duration(seconds: 1),
-                                curve: Curves.easeInOutBack,
-                                transition: Transition.zoom,
-                              );
+                              transition: Transition.rightToLeftWithFade,
+                              duration: Duration(milliseconds: 400)
+                          );
+                        },
+                      ),
+                      Divider(),
+                      ListTile(
+                          leading: Icon(ThemeService().loadThemeFromBox()
+                              ? Icons.wb_twighlight
+                              : Icons.wb_sunny_sharp),
+                          title: Text('change_theme'.tr),
+                          subtitle: Text(ThemeService().loadThemeFromBox()
+                              ? 'dark'.tr
+                              : 'light'.tr),
+                          trailing: Switch(
+                            value: ThemeService().loadThemeFromBox(),
+                            onChanged: (val) {
+                              ThemeService().switchTheme();
                             },
-                          ),
-                        ],
-                      )
-                  ),
+                            activeColor: Theme.of(context).accentColor,
+                          )),
+                      ListTile(
+                          leading: Icon(Icons.translate),
+                          title: Text('change_language'.tr),
+                          subtitle: Text(
+                              LanguageService().locale.languageCode == 'bn'
+                                  ? 'bengali'.tr
+                                  : 'english'.tr),
+                          trailing: Switch(
+                            value: LanguageService().locale.languageCode == 'bn'
+                                ? true
+                                : false,
+                            onChanged: (val) {
+                              if (val) {
+                                LanguageService().switchLanguage(
+                                    changeLocale: Locale('bn', 'BD'));
+                              } else {
+                                LanguageService().switchLanguage(
+                                    changeLocale: Locale('en', 'US'));
+                              }
+                            },
+                            activeColor: Theme.of(context).accentColor,
+                          )),
+                      ListTile(
+                        leading: Icon(Icons.widgets),
+                        title: Text('Essential widgets'),
+                        subtitle: Text('Custom widgets for use'),
+                        trailing: Icon(Icons.keyboard_arrow_right),
+                        onTap: () {
+                          Get.to(
+                            ViewAllWidgets(),
+                            duration: Duration(seconds: 1),
+                            curve: Curves.easeInOutBack,
+                            transition: Transition.zoom,
+                          );
+                        },
+                      ),
+                    ],
+                  )),
                   Container(
                     alignment: Alignment.centerRight,
                     padding: EdgeInsets.all(8.0),
                     child: Obx(() => Text(
-                      "version".tr+"-${NumberTranslator.translate(number: infoController?.packageInformation?.value?.version??'-')}",
-                      style: TextStyle(
-                        fontSize: 10.0,
-                        color: Get.theme.accentColor,
-                      ),
-                      textAlign: TextAlign.right,
-                    )),
+                          "version".tr +
+                              "-${NumberTranslator.translate(number: infoController?.packageInformation?.value?.version ?? '-')}",
+                          style: TextStyle(
+                            fontSize: 10.0,
+                            color: Get.theme.accentColor,
+                          ),
+                          textAlign: TextAlign.right,
+                        )),
                   ),
                 ],
               ),

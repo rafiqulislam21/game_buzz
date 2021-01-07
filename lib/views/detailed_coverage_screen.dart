@@ -9,8 +9,9 @@ import 'widgets/widgets.dart';
 class DetailedCoverageScreen extends StatelessWidget {
   final String title;
   final int id;
+  final String tag;
 
-  DetailedCoverageScreen({Key key, this.title, @required this.id}) : super(key: key);
+  DetailedCoverageScreen({Key key, this.title, @required this.id, @required this.tag}) : super(key: key);
   final CustomTabControllers tabControllers = Get.put(CustomTabControllers());
   final ScrollController _scrollViewController = ScrollController();
 
@@ -28,7 +29,7 @@ class DetailedCoverageScreen extends StatelessWidget {
                   : Center(
                       child: ListTile(
                     leading: Hero(
-                      tag: id,
+                      tag: tag,
                       child: Icon(
                         Icons.sports_baseball,
                         size: 60,

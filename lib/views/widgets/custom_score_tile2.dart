@@ -54,7 +54,26 @@ class CustomScoreTile2 extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: ListTile(
+                              child: Row(
+                                children: [
+                                  CustomCachedNetworkImage(
+                                    url: "http://via.placeholder.com/288x188",
+                                    height: 25,
+                                    width: 25,
+                                  ),
+                                  SizedBox(width: 5,),
+                                  Text(
+                                    "AUS",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w300,
+                                    ),
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                ],
+                              ),
+
+                              /*ListTile(
                                 dense: true,
                                 leading: CustomCachedNetworkImage(
                                   url: "http://via.placeholder.com/288x188",
@@ -69,7 +88,7 @@ class CustomScoreTile2 extends StatelessWidget {
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
                                 ),
-                              ),
+                              ),*/
                             ),
                             Expanded(
                               flex: 2,
@@ -96,21 +115,23 @@ class CustomScoreTile2 extends StatelessWidget {
                           children: [
                             Expanded(
                               flex: 1,
-                              child: ListTile(
-                                dense: true,
-                                leading: CustomCachedNetworkImage(
-                                  url: "http://via.placeholder.com/288x188",
-                                  height: 25,
-                                  width: 25,
-                                ),
-                                title: Text(
-                                  "IND",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w300,
+                              child: Row(
+                                children: [
+                                  CustomCachedNetworkImage(
+                                    url: "http://via.placeholder.com/288x188",
+                                    height: 25,
+                                    width: 25,
                                   ),
-                                  maxLines: 1,
-                                  overflow: TextOverflow.ellipsis,
-                                ),
+                                  SizedBox(width: 5,),
+                                  Text(
+                                    "IND",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w300,
+                                    ),
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                ],
                               ),
                             ),
                             Expanded(
