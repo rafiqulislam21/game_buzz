@@ -409,6 +409,7 @@ class HomeScreen extends StatelessWidget {
             /*onPageChanged: (pageNo){
                 controller.updatePage(pageNo);
               },*/
+
             physics: NeverScrollableScrollPhysics(),
             children: <Widget>[
               HomePage(),
